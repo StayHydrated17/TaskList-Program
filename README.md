@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+General overview of this Task List Program
 
-Things you may want to cover:
 
-* Ruby version
+* Using ruby 2.7.6p219 (2022-04-12 revision c9c2245c0a) [x86_64-linux]
 
-* System dependencies
+* PosgresSQL
 
-* Configuration
+* Running in conjunction with docker compose 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* This program essentially allows users to create, add , edit , delete and update a running list of tasks. The user can add a task title and due date.
