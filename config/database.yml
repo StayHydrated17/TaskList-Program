@@ -32,7 +32,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: 'pass123'
+  password: 'password'
 
   pool: 5
 
