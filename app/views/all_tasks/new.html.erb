@@ -1,0 +1,10 @@
+<div class="columns is-centered mt-6">
+<div class="column is-one-third">
+    <h1 class="new-task">New Task</h1>
+        <br/>
+
+    <%= render 'form', all_task: @all_task %>
+
+    <%= link_to 'Back', all_tasks_path, class:"button is-warning" %>
+</div>
+</div>

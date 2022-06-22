@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Task Title:</strong>
+  <%= @all_task.task_title %>
+</p>
+
+<p>
+  <strong>Task Description:</strong>
+  <%= @all_task.task_description %>
+</p>
+
+<p>
+<span class="has-text-weight-bold">Task Created: </span> <%= @all_task.created_at.strftime("%m-%d-%Y") %></span>
+</p>  
+
+
+<p>
+  <strong>Task Due Date:</strong>
+  <%= @all_task.task_due_date.strftime("%m-%d-%Y") %>
+</p>
+
+<p>
+  <strong>Task Completed Status:</strong>
+  <%= @all_task.task_completed %>
+</p>
+
+<%= link_to 'Edit', edit_all_task_path(@all_task) %> |
+<%= link_to 'Back', all_tasks_path %>

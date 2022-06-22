@@ -1,0 +1,32 @@
+
+
+<div class="columns mt-6 is-centered"> 
+ <% @all_tasks.each do |all_task| %>
+  <div class="column is-one-quarter" >
+  <div class="card">
+    <header class="card-header-title is-centered has-text-weight-bold">
+         
+        <%= all_task.task_title %>  
+ 
+
+    </header> 
+
+    <div class="card-content">
+        <div class="content">
+          <p><span class="has-text-weight-bold">Description: </span><%= all_task.task_description %></p>
+          <p><span class="has-text-weight-bold">Task Created: </span> <%= all_task.created_at.strftime("%m-%d-%Y") %></span></p>  
+          <p><span class="has-text-weight-bold">Task Due Date: </span> <%= all_task.task_due_date.to_s %></span></p>  
+          <p><span class="has-text-weight-bold">Task Complete Status : </span><%= all_task.task_completed %></span></p>
+         </div>
+    </div>
+
+      <div class="card-footer">
+         <%= link_to 'Show', all_task, class: "card-footer-item" %>  
+         <%= link_to 'Edit', edit_all_task_path(all_task) , class: "card-footer-item"  %>  
+         <%= link_to 'Destroy', all_task, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item" %> 
+      </div>
+    </div> 
+    </div> 
+    <% end %>
+</div>
+

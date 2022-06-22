@@ -1,0 +1,41 @@
+<%= form_with(model: all_task) do |form| %>
+  <% if all_task.errors.any? %>
+    <div id="message is-danger">
+    <div class="message-header">
+      <p><%= pluralize(all_task.errors.count, "error") %> prohibited this task from being saved:</p>
+    </div>
+
+    <div class="message-body">
+      <ul>
+        <% all_task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :task_title, class: "label"%>
+    <%= form.text_field :task_title, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :task_description, class:"label" %>
+    <%= form.text_field :task_description, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :task_due_date, class:"label" %>
+    <input type="date" <%= form.text_field :task_due_date, class:"input" %>>
+  </div>
+
+  <div class="field">
+    <%= form.label :task_completed, class:"label" %>
+    <%= form.check_box :task_completed, class:  "input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-success" %>
+  </div>
+<% end %>
