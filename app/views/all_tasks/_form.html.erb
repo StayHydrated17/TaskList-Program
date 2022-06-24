@@ -26,16 +26,24 @@
   </div>
 
   <div class="field">
+    <%= form.label :"Task Created On:", class:"label" %>
+    <%= form.text_field :created_at, class:"input" %>
+
+  </div>
+
+  <div class="field">
     <%= form.label :task_due_date, class:"label" %>
     <input type="date" <%= form.text_field :task_due_date, class:"input" %>>
   </div>
 
   <div class="field">
     <%= form.label :task_completed, class:"label" %>
-    <%= form.check_box :task_completed, class:  "input" %>
+    <%= form.check_box :task_completed %>
   </div>
 
   <div class="actions">
-    <%= form.submit class:"button is-success" %>
+    <%= form.submit  class:"button is-success" %>
+    <%= link_to 'Back', all_tasks_path, class:"button is-warning" %>
+
   </div>
 <% end %>

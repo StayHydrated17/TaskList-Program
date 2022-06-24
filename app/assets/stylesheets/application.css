@@ -14,10 +14,14 @@
  */
 
  .new-task{
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    text-transform: uppercase;
+    text-align: center!important;
+    font-weight: bold!important;
+    font-size: 25px!important;
+    text-transform: uppercase!important;
+ }
+
+ .text-size{
+   font-size: 25px!important
  }
 
  .stick-nav{
@@ -25,5 +29,6 @@
    top: 0!important;
    z-index: 999!important;
  }
+
 
 

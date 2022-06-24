@@ -1,10 +1,11 @@
 
-
-<div class="columns mt-6 is-centered"> 
- <% @all_tasks.each do |all_task| %>
-  <div class="column is-one-quarter" >
+<div class=" mt-6 is-centered"> 
+ <%#@all_tasks.where(:task_completed => true).each do |all_task| #%> 
+ 
+ <%@all_tasks.each do |all_task| %> 
+  <div class="column" >
   <div class="card">
-    <header class="card-header-title is-centered has-text-weight-bold">
+    <header class="card-header-title text-size is-centered has-text-weight-bold">
          
         <%= all_task.task_title %>  
  
@@ -21,9 +22,10 @@
     </div>
 
       <div class="card-footer">
-         <%= link_to 'Show', all_task, class: "card-footer-item" %>  
-         <%= link_to 'Edit', edit_all_task_path(all_task) , class: "card-footer-item"  %>  
-         <%= link_to 'Destroy', all_task, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item" %> 
+         <%= link_to 'Show', all_task, class: "card-footer-item button is-success is-light" %>  
+         <%= link_to 'Edit', edit_all_task_path(all_task) , class: "card-footer-item button is-warning is-light"  %>  
+         <%= link_to 'Destroy', all_task, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item button is-danger is-light" %> 
+      
       </div>
     </div> 
     </div> 

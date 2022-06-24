@@ -6,7 +6,7 @@ class AllTasksController < ApplicationController
     @all_tasks = AllTask.all
   end
 
-  # GET /all_tasks/1 or /all_tasks/1.json
+  # GET /all_tasks/1 or /status or /all_tasks/1.json
   def show
   end
 
@@ -18,6 +18,21 @@ class AllTasksController < ApplicationController
   # GET /all_tasks/1/edit
   def edit
   end
+
+#method to search through available tasks
+  def search
+    #byebug
+    if params[:search].blank?
+      redirect_to all_tasks_path and disable_request_forgery_protection
+    
+    else
+      @parameter = params[:search].downcase
+      @results = AllTask.all.where("lower(task_title) LIKE :search", search: "%#{@parameter}%")
+
+      #@matchTask = AllTask.all.where("lower(task_title) LIKE ?", "%#{@parameter}%")
+    end
+  end
+
 
   # POST /all_tasks or /all_tasks.json
   def create
