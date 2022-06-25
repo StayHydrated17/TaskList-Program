@@ -19,17 +19,27 @@ class AllTasksController < ApplicationController
   def edit
   end
 
+  def tasks_completed
+    @all_tasks = AllTask.all
+    render "tasks_completed"
+  end
+
+  def tasks_uncompleted
+    @all_tasks = AllTask.all
+    render "tasks_uncompleted"
+  end
+
 #method to search through available tasks
-  def search
+  def search_tasks
     #byebug
     if params[:search].blank?
-      redirect_to all_tasks_path and disable_request_forgery_protection
+      redirect_to all_tasks_path
     
     else
       @parameter = params[:search].downcase
       @results = AllTask.all.where("lower(task_title) LIKE :search", search: "%#{@parameter}%")
 
-      #@matchTask = AllTask.all.where("lower(task_title) LIKE ?", "%#{@parameter}%")
+      @matchTask = AllTask.all.where("lower(task_title) LIKE ?", "%#{@parameter}%")
     end
   end
 

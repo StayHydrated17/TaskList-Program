@@ -20,11 +20,12 @@
 
             </a>
             <a class="navbar-item">
-            <%= link_to "Completed Tasks", all_tasks_status_path, class:"navbar-item" %>
+            <%= link_to "Completed Tasks", tasks_completed_path, remote: true, all_task: @all_task, class:"navbar-item" %>
 
             </a>
             <a class="navbar-item">
-              Uncompleted Tasks
+            <%= link_to "Uncompleted Tasks", tasks_uncompleted_path, remote: true, all_task: @all_task, class:"navbar-item" %>
+
             </a>
             <span class="navbar-item">
                 <span class="icon">

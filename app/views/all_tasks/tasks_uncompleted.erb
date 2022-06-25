@@ -1,8 +1,11 @@
-<h3> search results</h3>
 
+<div class=" mt-6 is-centered"> 
+ <%#@all_tasks.where(:task_completed => true).each do |all_task| #%> 
+ 
+ <%@all_tasks.where(:task_completed => false).each do |all_task| %> 
 
-<% @matchTask.each do |all_task| %>
-     <div class="card">
+  <div class="column" >
+  <div class="card">
     <header class="card-header-title text-size is-centered has-text-weight-bold">
          
         <%= all_task.task_title %>  
@@ -27,4 +30,6 @@
       </div>
     </div> 
     </div> 
-<%end%>
+    <% end %>
+</div>
+

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'all_tasks#index'
 
   get'search', to:"all_tasks#search_tasks"
-  get'/all_tasks/status', to:"all_tasks#task_filter_status"
+  get'tasks_completed', to:"all_tasks#tasks_completed"
+  get'tasks_uncompleted', to:"all_tasks#tasks_uncompleted"
 
   #get 'tasks/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
