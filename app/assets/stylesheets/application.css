@@ -24,6 +24,18 @@
    font-size: 25px!important
  }
 
+ .input-font{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifS;
+ }
+
+ .titleSize{
+   font-size: 21px!important;
+ }
+
+ .subtitleSize{
+   font-size: 17px!important;
+
+ }
  .stick-nav{
    position: sticky!important;
    top: 0!important;

@@ -19,17 +19,20 @@ class AllTasksController < ApplicationController
   def edit
   end
 
+
+  #gathering all tasks and throwing it back to tasks_completed route and view
   def tasks_completed
     @all_tasks = AllTask.all
     render "tasks_completed"
   end
 
+  #gathering all tasks and throwing it back to tasks_uncompleted route and view
   def tasks_uncompleted
     @all_tasks = AllTask.all
     render "tasks_uncompleted"
   end
 
-#method to search through available tasks
+#method to search through available tasks using the search route and search_tasks view
   def search_tasks
     #byebug
     if params[:search].blank?

@@ -4,7 +4,7 @@ class CreateAllTasks < ActiveRecord::Migration[6.1]
       t.string :task_name
       t.string :task_title
       t.string :task_description
-      t.string :task_due_date
+      t.datetime :task_due_date
       t.boolean :task_completed
 
       t.timestamps
