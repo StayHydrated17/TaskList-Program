@@ -1,8 +1,15 @@
     <br/>
- 
- <h1 class="new-task new-task animate__animated animate__fadeInUp animate__slow">Search Results</h1>
+<%if @matchTask.length == 0 %>
+ <h1 class="new-task new-task animate__animated animate__fadeInUp animate__slow">No Search Results Found.</h1>
     <br/>
     <br/>
+
+<% else%>
+    <h1 class="new-task new-task animate__animated animate__fadeInUp animate__slow">Search Results:</h1>
+    <br/>
+    <br/>
+  <button class="button is-primary">Sort By Date </button>
+
     
 <% @matchTask.each do |all_task| %>
      <div class="card">
@@ -30,4 +37,5 @@
       </div>
     </div> 
     </div> 
+<%end%>
 <%end%>

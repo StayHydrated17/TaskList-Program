@@ -20,12 +20,15 @@
                 <%= link_to "All Tasks", all_tasks_path, class:"navbar-item" %>
 
             </a>
+
+            <%#Buttons for filtering tasks by completed/uncompleted#%>
             <a class="navbar-item">
-            <%= link_to "Completed Tasks", tasks_completed_path, remote: true, all_task: @all_task, class:"navbar-item" %>
+            <%= link_to "Completed Tasks", tasks_completed_path,all_task: @all_task, class:"navbar-item" %>
 
             </a>
             <a class="navbar-item">
-            <%= link_to "Uncompleted Tasks", tasks_uncompleted_path, remote: true, all_task: @all_task, class:"navbar-item" %>
+            <%= link_to "Uncompleted Tasks", tasks_uncompleted_path, all_task: @all_task, class:"navbar-item" %>
+            
 
             </a>
             <span class="navbar-item">

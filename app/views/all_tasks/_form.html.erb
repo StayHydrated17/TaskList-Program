@@ -25,15 +25,19 @@
     <%= form.text_field :task_description, class:"input" %>
   </div>
 
+<%if all_task.created_at.present? %>
   <div class="field">
     <%= form.label :"Task Created On:", class:"label" %>
     <%= form.text_field :created_at, class:"input" %>
-
   </div>
+
+  <%else%>
+
+  <%end %>
 
   <div class="field">
     <%= form.label :task_due_date, class:"label" %>
-     <%= form.text_field :task_due_date, class:"input" %>
+     <input type="date" <%= form.text_field :task_due_date, class:"input" %> />
   </div>
 
 

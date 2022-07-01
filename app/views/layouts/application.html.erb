@@ -28,7 +28,7 @@
   <%= render"layouts/shared/header" %>
   
   <% if notice.present? %>
-    <div class="notification is-link is-light"><%= notice %></div>
+    <div class="notification is-success is-light"><%= notice %></div>
   <% end %>
 
   <% if alert.present?%>
@@ -36,7 +36,7 @@
   <% end %>
 
   <div class="container">
-    <%= yield %>
+      <%= yield %>
   </div>
 
   </body>
